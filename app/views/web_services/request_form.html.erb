@@ -2,31 +2,42 @@
 
 <%= form_tag(send_request_path) do %>
   <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <%= text_field_tag :ori %></br></br>
   
   <label>Stop Date </label>
-  <%= text_field_tag :age %></br></br>
+  <%= text_field_tag :stop_date %></br></br>
   
   <label>Stop Time</label>
-  <%= text_field_tag :age %></br></br>
+  <%= text_field_tag :stop_time %></br></br>
   
   <label>Stop Duration</label>
-  <%= text_field_tag :age %></br></br>
+  <%= text_field_tag :stop_duration %></br></br>
   
-  <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <label>Closest City </label>
+  <%= text_field_tag :closestcity %></br></br>
   
-  <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <label>K-Reason for Stop </label>
+  <%= text_field_tag :k_reasonforstop %></br></br>
+
+  <label>Perception Data</label>
+  <select>
+  <option value="Asian">Asian</option>
+  <option value="-Black-AfricanAmer">-Black-AfricanAmer"</option>
+  <option value="midEasternSouthAsian">midEasternSouthAsian</option>
+  <option value="White">White</option> 
+</select> </br></br>
   
-  <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <label>suspicion Drugtxn </label>
+  <%= text_field_tag :suspiciondrugtxn %></br></br>
   
-  <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <label>Basis for Property Seizure </label>
+  <%= text_field_tag :basisforpropertyseizure %></br></br>
   
-  <label>ORI </label>
-  <%= text_field_tag :age %></br></br>
+  <label>Results of Stop </label>
+  <%= text_field_tag :resultsof_stop %></br></br>
+
+
+
   
   <%= submit_tag "Submit" %>
 <% end %>
