@@ -1,0 +1,8 @@
+class WebServicesController < ApplicationController
+
+  
+  def send_request
+    raise params.inspect
+  end
+
+end

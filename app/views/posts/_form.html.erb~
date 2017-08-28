@@ -1,0 +1,56 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  
+  <input type="text" name="term" class="auto_search_complete">
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  
+<% end %>
+
+
+<script type="text/javascript">
+
+$('.auto_search_complete').autocomplete({
+  minLength: 3,
+  delay: 600,
+  source: function(request, response) {
+    $.ajax({
+      url: "/movie_names",
+      dataType: "json",
+      data: {term: request.term},
+      success: function( data ) {
+        
+        response($.map(data, function (item) {
+                                return {
+                                    label: item.label,
+                                    value: item.value
+                                }
+                            }));
+      }
+    });
+  }        
+});
+
+</script>
