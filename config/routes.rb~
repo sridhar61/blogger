@@ -4,7 +4,7 @@ Blogger::Application.routes.draw do
   get '/movie_names' => 'posts#find_by_prefixes'
   
   
-  get '/request_form' => 'posts#request_form'
+  get '/request_form' => 'web_services#request_form'
   
   post '/send_request' => "web_services#send_request"
 

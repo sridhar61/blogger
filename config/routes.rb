@@ -6,7 +6,7 @@ Blogger::Application.routes.draw do
   
   get '/request_form' => 'web_services#request_form'
   
-  post '/send_request' => "web_services#send_request"
+  post '/send_request' => "web_services#send_request", defaults: {format: :json}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
