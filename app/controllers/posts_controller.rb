@@ -3,6 +3,7 @@ require 'open-uri'
 require 'redis'
 require 'json'
 
+
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
