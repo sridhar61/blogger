@@ -2,7 +2,6 @@ stages:
   - build
   - test
   - deploy
-
 job1:
   stage: build
   script:
